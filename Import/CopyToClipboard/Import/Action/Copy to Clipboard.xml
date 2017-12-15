@@ -1,0 +1,20 @@
+﻿<AML>
+ <Item type="Action" id="0DB71F67CDB24EF6AE33D8A370F30550" action="add">
+  <item_query>&lt;Item type="{@type}" id="{@id}" levels= "1" action="get" /&gt;</item_query>
+  <label xml:lang="en">Copy to Clipboard</label>
+  <location>client</location>
+  <method keyed_name="PE_GetSelectedItems" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>PE_GetSelectedItems</name>
+   </Item>
+  </method>
+  <on_complete keyed_name="Item to Clipboard" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>Item to Clipboard</name>
+   </Item>
+  </on_complete>
+  <target>none</target>
+  <type>item</type>
+  <name>Copy to Clipboard</name>
+ </Item>
+</AML>

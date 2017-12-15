@@ -1,0 +1,48 @@
+﻿<AML>
+ <Item type="Method" id="1D71D8C696E845EB935464C5449F57E4" action="add">
+  <comments>Builds a string using item properties and copies to clipboard</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[if (!inArgs || !inArgs.results || !inArgs.results.getItemByIndex(0))
+{
+  return;
+}
+
+var items = inArgs.results;
+var buffer = "";
+
+// build a string of items with the format <item_number>: "<name>"\n
+for (var i = 0; i < items.getItemCount(); i++)
+{
+    buffer += items.getItemByIndex(i).getProperty("item_number","");
+    buffer += ": \"";
+    buffer += items.getItemByIndex(i).getProperty("name","");
+    buffer += "\"\n";
+}
+
+// Not all browsers support programmatic access to the clipboard (Firefox).
+// If clipboard access is not supported, print the result in an alert 
+// and tell the user to copy contents with Ctrl+C.
+if (aras.utils.isClipboardSupported())
+{
+    copyToBuffer(buffer);
+    return alert("Item(s) copied.");
+} 
+else 
+{
+    return alert("Browser does not allow clipboard access. Please use Ctrl+C to copy:\n\n" + buffer);
+}
+
+//// Function(s) ///////////////////////////////////////////////////////////////
+
+//  takes a string & writes it to the clipboard
+function copyToBuffer(buffer) {
+    if (window.clipboardData) {
+        window.clipboardData.setData('Text', buffer);
+    } else {
+        aras.utils.setClipboardData('Text', buffer, window);
+    }
+}]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>Item to Clipboard</name>
+ </Item>
+</AML>
