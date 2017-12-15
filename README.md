@@ -50,6 +50,8 @@ You are now ready to login to try out the Copy To Clipboard action.
 
 ## Usage
 
+![Demo](Screenshots/demo.gif)
+
 1. Log in to Aras.
 2. Navigate to the ItemType you added the action to in the setup steps.
 3. Select one or more items in the main grid. (Use Ctrl+click to pick more than one.)
