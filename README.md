@@ -14,7 +14,7 @@ Release | Notes
 
 Project | Aras
 --------|------
-[v1.0](https://github.com/ArasLabs/copy-to-clipboard/releases/tag/v1.0) | 11.0 SP9
+[v1.0](https://github.com/ArasLabs/copy-to-clipboard/releases/tag/v1.0) | 11.0 SP12
 
 ## Installation
 
