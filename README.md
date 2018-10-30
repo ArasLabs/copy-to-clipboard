@@ -8,12 +8,14 @@ Note: The sample method was developed using the Part ItemType, but it can be eas
 
 Release | Notes
 --------|--------
+[v1.1.0](https://github.com/ArasLabs/copy-to-clipboard/releases/tag/v1.1.0) | Confirmed support for Aras 11 SP15.
 [v1.0](https://github.com/ArasLabs/copy-to-clipboard/releases/tag/v1.0) | First release. Includes sample code to use the action with the Part, CAD, and/or Document ItemTypes.
 
 #### Supported Aras Versions
 
 Project | Aras
 --------|------
+[v1.1.0](https://github.com/ArasLabs/copy-to-clipboard/releases/tag/v1.1.0) | 11.0 SP15, 11.0 SP14, 11.0 SP12
 [v1.0](https://github.com/ArasLabs/copy-to-clipboard/releases/tag/v1.0) | 11.0 SP12
 
 ## Installation
